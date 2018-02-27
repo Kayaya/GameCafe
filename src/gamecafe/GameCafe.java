@@ -6,6 +6,11 @@
 package gamecafe;
 
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -57,6 +62,14 @@ public class GameCafe extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        
+        DB_connect conn = new DB_connect();
+        
+        //Insert a record
+        conn.insertData();
+        
+        //Show data
+        conn.getData();
     }
     
 }

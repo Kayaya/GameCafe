@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar id="menu_header" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New member" />
+            <MenuItem mnemonicParsing="false" text="View member profile" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Delete member" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="Go to">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Home" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="eSports Events" />
+                  <MenuItem mnemonicParsing="false" text="Bookings" />
+                  <MenuItem mnemonicParsing="false" text="Games" />
+               </items>
+            </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About Game cafe" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane id="pane_body" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Hyperlink prefHeight="25.0" prefWidth="40.0" text="Main" />
+            <Hyperlink layoutX="40.0" layoutY="-2.0" prefHeight="25.0" prefWidth="19.0" text="&gt;" />
+            <Hyperlink layoutX="59.0" layoutY="-2.0" prefHeight="25.0" prefWidth="90.0" text="Membership" />
+            <Separator layoutX="-14.0" layoutY="25.0" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="656.0" />
+            <Separator layoutX="128.0" layoutY="26.0" orientation="VERTICAL" prefHeight="345.0" prefWidth="5.0" />
+            <Button id="button_add" layoutX="22.0" layoutY="40.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" text="Add" />
+            <Button id="button_update" layoutX="22.0" layoutY="82.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" text="Update" />
+            <Button id="button_delete" layoutX="23.0" layoutY="127.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" text="Delete" />
+            <TableView id="table_results" layoutX="130.0" layoutY="27.0" prefHeight="339.0" prefWidth="507.0">
+              <columns>
+                <TableColumn id="id" prefWidth="56.0" text="ID" />
+                <TableColumn id="nickname" prefWidth="146.0" text="Nickname" />
+                  <TableColumn id="age" prefWidth="59.0" text="Age" />
+                  <TableColumn id="membership_type" prefWidth="121.0" text="Membership type" />
+                  <TableColumn id="qty_games" prefWidth="126.0" text="Quantity of games" />
+              </columns>
+            </TableView>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
